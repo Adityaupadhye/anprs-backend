@@ -1,0 +1,27 @@
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="sentFile" />
+    <input type="submit" name="submit" value="Upload" />
+</form>
+
+{% if str %}
+<h1>Vehicle Number: {{str}}</h1>
+{% endif %}
+
+{% for lp in object %}
+
+<h2>Owner's Details:</h2>
+<div>
+    <h3>Name: {{lp.owner}}</h3>
+    <h3>Ph.No: {{lp.mob_num}}</h3>
+    <h4>Email: {{lp.mail}}</h4>
+   <hr/>  
+</div>
+
+{% endfor %}
+
+{% if bool_val == False %}
+<div>
+    <h3>Not found in Database</h3>
+</div>
+{% endif %}

@@ -1,0 +1,6 @@
+Django>=3.2.11
+ipython>=8.0.1
+matplotlib>=3.5.1
+numpy>=1.18.5
+opencv_python_headless>=4.5.5.62
+keras>=2.7.0
